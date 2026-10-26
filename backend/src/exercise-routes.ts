@@ -6,7 +6,7 @@ import { createExerciseSchema } from "./exercise.js";
 
 // Решение: limit/offset, а не курсор. Список упражнений небольшой и редко растёт,
 // курсорная пагинация усложнила бы клиент без выигрыша. Потолок limit защищает от выгрузки всей таблицы.
-const listQuerySchema = z.object({
+export const listQuerySchema = z.object({
     limit: z.coerce.number().int().min(1).max(100).default(50),
     offset: z.coerce.number().int().min(0).default(0),
 });
