@@ -4,7 +4,6 @@ import { db } from "./db/client.js";
 import { exercises, workoutSets } from "./db/schema.js";
 import { listQuerySchema } from "./exercise-routes.js";
 import { createWorkoutSetSchema, exerciseIdParamSchema } from "./workout-set.js";
-import * as repl from "node:repl";
 
 const FOREIGN_KEY_VIOLATION = "23503";
 
